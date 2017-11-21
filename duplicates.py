@@ -32,7 +32,7 @@ def print_duplicates(duplicates_dictionary):
     for index in duplicates_dictionary:
         for file in duplicates_dictionary[index]:
             if len(duplicates_dictionary[index][file]) > 1:
-                print('Дубликаты файлов: {}'.
+                print('Duplicates file: {}'.
                       format(', '.join(duplicates_dictionary[index][file])))
 
 

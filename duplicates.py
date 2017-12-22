@@ -3,7 +3,7 @@ import hashlib
 import argparse
 
 
-def parser_arg():
+def parse_arg():
     parser = argparse.ArgumentParser()
     parser.add_argument(
         "folder_path",
@@ -40,7 +40,7 @@ def print_duplicates(duplicates_dictionary):
 
 
 if __name__ == '__main__':
-    parse_args = parser_arg()
-    folder_path = parse_args.folder_path
+    args = parse_arg()
+    folder_path = args.folder_path
     dictionary_of_duplicates = find_duplicate(folder_path)
     print_duplicates(dictionary_of_duplicates)

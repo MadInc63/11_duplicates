@@ -5,10 +5,11 @@ import argparse
 
 def parser_arg():
     parser = argparse.ArgumentParser()
-    parser.add_argument("folder_path",
-                        help="folder to find duplicates")
-    args = parser.parse_args()
-    return args.folder_path
+    parser.add_argument(
+        "folder_path",
+        help="folder to find duplicates"
+    )
+    return parser.parse_args()
 
 
 def find_duplicate(folder):
@@ -32,11 +33,14 @@ def print_duplicates(duplicates_dictionary):
     for index in duplicates_dictionary:
         for file in duplicates_dictionary[index]:
             if len(duplicates_dictionary[index][file]) > 1:
-                print('Duplicates file: {}'.
-                      format(', '.join(duplicates_dictionary[index][file])))
+                print(
+                    'Duplicate files: {}'.
+                    format(', '.join(duplicates_dictionary[index][file]))
+                )
 
 
 if __name__ == '__main__':
-    folder_path = parser_arg()
+    parse_args = parser_arg()
+    folder_path = parse_args.folder_path
     dictionary_of_duplicates = find_duplicate(folder_path)
     print_duplicates(dictionary_of_duplicates)

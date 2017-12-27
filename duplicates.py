@@ -12,12 +12,13 @@ def parse_arg():
     return parser.parse_args()
 
 
-def find_duplicate(folder):
+def list_of_duplicate(folder):
     list_of_files = {}
     for dirs, subdirs, files in os.walk(folder):
         for name in files:
             file_path = os.path.join(dirs, name)
-            file_hash = hashlib.sha1(open(file_path, 'rb').read()).digest()
+            with open(file_path, 'rb') as checked_file:
+                file_hash = hashlib.sha1(checked_file.read()).digest()
             add_duplicate_to_list = list_of_files.get(file_hash)
             if add_duplicate_to_list:
                 try:
@@ -42,5 +43,5 @@ def print_duplicates(duplicates_dictionary):
 if __name__ == '__main__':
     args = parse_arg()
     folder_path = args.folder_path
-    dictionary_of_duplicates = find_duplicate(folder_path)
+    dictionary_of_duplicates = list_of_duplicate(folder_path)
     print_duplicates(dictionary_of_duplicates)

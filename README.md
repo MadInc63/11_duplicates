@@ -16,14 +16,29 @@ optional arguments:
 To start searching for duplicate files in a folder, you must specify the path to the folder using the space after the script is called.
 ```bash
 ~$ python duplicates.py d:\arduino
-Duplicates file: d:\arduino\libraries\ds3231-master\Makefile, d:\arduino\libraries\ds3231-master\examples\rtc_ds3231_alarm\Makefile
-Duplicates file: d:\arduino\libraries\LCDMenuLib\examples\LCDML_000_serialmonitor\LCDML_CONTROL.ino, d:\arduino\libraries\LCDMenuLib\examples\LCDML_001_lcd_liquidcrystal\LCDML_CONTROL.ino, d:\arduino\libraries\LCDMenuLib\examples\LCDML_100_initscreen\LCDML_CONTROL.ino, d:\arduino\libraries\LCDMenuLib\examples\LCDML_101_menu_with_parameter\LCDML_CONTROL.ino
-, d:\arduino\libraries\LCDMenuLib\examples\LCDML_102_dynamic_menu\LCDML_CONTROL.ino, d:\arduino\libraries\LCDMenuLib\examples\LCDML_103_hidden_menu_elemnts\LCDML_CONTROL.ino, d:\arduino\libraries\LCDMenuLib\examples\LCDML_104_change_value\LCDML_CONTROL.ino, d:\arduino\libraries\LCDMenuLib\examples\LCDML_200_backend_basics\LCDML_CONTROL.ino
-Duplicates file: d:\arduino\libraries\LCDMenuLib\examples\LCDML_000_serialmonitor\LCDML_FUNC_BACKEND.ino, d:\arduino\libraries\LCDMenuLib\examples\LCDML_001_lcd_liquidcrystal\LCDML_FUNC_BACKEND.ino
-Duplicates file: d:\arduino\libraries\LCDMenuLib\examples\LCDML_001_lcd_liquidcrystal\LCDML_DISP.ino, d:\arduino\libraries\LCDMenuLib\examples\LCDML_100_initscreen\LCDML_DISP.ino, d:\arduino\libraries\LCDMenuLib\examples\LCDML_101_menu_with_parameter\LCDML_DISP.ino, d:\arduino\libraries\LCDMenuLib\examples\LCDML_102_dynamic_menu\LCDML_DISP.ino, d:\arduino\
-libraries\LCDMenuLib\examples\LCDML_103_hidden_menu_elemnts\LCDML_DISP.ino, d:\arduino\libraries\LCDMenuLib\examples\LCDML_104_change_value\LCDML_DISP.ino, d:\arduino\libraries\LCDMenuLib\examples\LCDML_200_backend_basics\LCDML_DISP.ino
-Duplicates file: d:\arduino\libraries\LCDMenuLib\examples\LCDML_001_lcd_liquidcrystal\LCDML_FUNC_DISP.ino, d:\arduino\libraries\LCDMenuLib\examples\LCDML_002_lcd_i2c\LCDML_FUNC_DISP.ino
-Duplicates file: d:\arduino\libraries\LCDMenuLib\examples\LCDML_002_lcd_i2c\LCDML_CONTROL.ino, d:\arduino\libraries\LCDMenuLib\examples\LCDML_003_glcd_u8glib\LCDML_CONTROL.ino
+------------------------------------------------------------------------------------------------------------------
+ File:      d:\backup\07.09.2015\Документы\Сайт 24.08.2015\index.html
+ duplicate: d:\backup\07.09.2015\Документы\Сайт 25.08.2015\index.html
+ duplicate: d:\backup\07.09.2015\Документы\Сайт 25.08.2015 без изменений\index.html
+ duplicate: d:\backup\07.09.2015\Документы\Сайт Old Server 31.08.2015\index.html
+------------------------------------------------------------------------------------------------------------------
+ File:      d:\backup\07.09.2015\Документы\Сайт 24.08.2015\new_about_eng.css
+ duplicate: d:\backup\07.09.2015\Документы\Сайт 25.08.2015 без изменений\new_about_eng.css
+ duplicate: d:\backup\07.09.2015\Документы\Сайт Old Server 31.08.2015\new_about_eng.css
+------------------------------------------------------------------------------------------------------------------
+ File:      d:\backup\07.09.2015\Документы\Сайт 24.08.2015\new_development_eng.css
+ duplicate: d:\backup\07.09.2015\Документы\Сайт 25.08.2015 без изменений\new_development_eng.css
+ duplicate: d:\backup\07.09.2015\Документы\Сайт Old Server 31.08.2015\new_development_eng.css
+------------------------------------------------------------------------------------------------------------------
+ File:      d:\backup\07.09.2015\Документы\Сайт 24.08.2015\new_development_eng.html
+ duplicate: d:\backup\07.09.2015\Документы\Сайт 25.08.2015 без изменений\new_development_eng.html
+ duplicate: d:\backup\07.09.2015\Документы\Сайт Old Server 31.08.2015\new_development_eng.html
+------------------------------------------------------------------------------------------------------------------
+ File:      d:\backup\07.09.2015\Документы\Сайт 24.08.2015\documents\_notes\dwsync.xml
+ duplicate: d:\backup\07.09.2015\Документы\Сайт 25.08.2015\documents\_notes\dwsync.xml
+ duplicate: d:\backup\07.09.2015\Документы\Сайт 25.08.2015 без изменений\documents\_notes\dwsync.xml
+ duplicate: d:\backup\07.09.2015\Документы\Сайт New AllinOne 31.08.2015\documents\_notes\dwsync.xml
+------------------------------------------------------------------------------------------------------------------
 ```
 # Project Goals
 

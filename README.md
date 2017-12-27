@@ -15,7 +15,7 @@ optional arguments:
 ```
 To start searching for duplicate files in a folder, you must specify the path to the folder using the space after the script is called.
 ```bash
-~$ python duplicates.py d:\arduino
+~$ python duplicates.py d:\backup
 ------------------------------------------------------------------------------------------------------------------
  File:      d:\backup\07.09.2015\Документы\Сайт 24.08.2015\index.html
  duplicate: d:\backup\07.09.2015\Документы\Сайт 25.08.2015\index.html

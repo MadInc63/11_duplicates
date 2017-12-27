@@ -12,36 +12,38 @@ def parse_arg():
     return parser.parse_args()
 
 
-def list_of_duplicate(folder):
-    list_of_files = {}
-    for dirs, subdirs, files in os.walk(folder):
-        for name in files:
+def get_duplicates(folder):
+    dictionary_of_files = {}
+    for dirs, subdirs, file in os.walk(folder):
+        for name in file:
             file_path = os.path.join(dirs, name)
             with open(file_path, 'rb') as checked_file:
                 file_hash = hashlib.sha1(checked_file.read()).digest()
-            add_duplicate_to_list = list_of_files.get(file_hash)
-            if add_duplicate_to_list:
+            add_to_dict = dictionary_of_files.get((file_hash, name))
+            if add_to_dict:
                 try:
-                    list_of_files[file_hash][name].append(file_path)
+                    dictionary_of_files[(file_hash, name)].append(file_path)
                 except KeyError:
-                    list_of_files[file_hash][name] = [file_path]
+                    dictionary_of_files[(file_hash, name)] = [file_path]
             else:
-                list_of_files[file_hash] = {name: [file_path]}
-    return list_of_files
+                dictionary_of_files[(file_hash, name)] = [file_path]
+    return dictionary_of_files
 
 
 def print_duplicates(duplicates_dictionary):
     for index in duplicates_dictionary:
-        for file in duplicates_dictionary[index]:
-            if len(duplicates_dictionary[index][file]) > 1:
-                print(
-                    'Duplicate files: {}'.
-                    format(', '.join(duplicates_dictionary[index][file]))
-                )
+        if len(duplicates_dictionary[index]) > 1:
+            print('-----------------------------------------------------------'
+                  '-----------------------------------------------------------'
+                  '-------------------------------------')
+            print(
+                ' File:      {}'.
+                format('\n duplicate: '.join(duplicates_dictionary[index]))
+            )
 
 
 if __name__ == '__main__':
     args = parse_arg()
     folder_path = args.folder_path
-    dictionary_of_duplicates = list_of_duplicate(folder_path)
+    dictionary_of_duplicates = get_duplicates(folder_path)
     print_duplicates(dictionary_of_duplicates)

@@ -1,6 +1,7 @@
 import os
 import hashlib
 import argparse
+from collections import namedtuple
 
 
 def parse_arg():
@@ -12,38 +13,26 @@ def parse_arg():
     return parser.parse_args()
 
 
-def get_duplicates(folder):
-    dictionary_of_files = {}
-    for dirs, subdirs, file in os.walk(folder):
-        for name in file:
-            file_path = os.path.join(dirs, name)
+def get_duplicates_dictionary(folder):
+    dictionary_of_duplicate_files = namedtuple(list)
+    for dirs, subdirs, files in os.walk(folder):
+        for file in files:
+            file_path = os.path.join(dirs, file)
             with open(file_path, 'rb') as checked_file:
                 file_hash = hashlib.sha1(checked_file.read()).digest()
-            add_to_dict = dictionary_of_files.get((file_hash, name))
-            if add_to_dict:
-                try:
-                    dictionary_of_files[(file_hash, name)].append(file_path)
-                except KeyError:
-                    dictionary_of_files[(file_hash, name)] = [file_path]
-            else:
-                dictionary_of_files[(file_hash, name)] = [file_path]
-    return dictionary_of_files
+            dictionary_key = (file_hash, file)
+            dictionary_of_duplicate_files[dictionary_key].append(file_path)
+    return dictionary_of_duplicate_files
 
 
-def print_duplicates(duplicates_dictionary):
-    for index in duplicates_dictionary:
-        if len(duplicates_dictionary[index]) > 1:
-            print('-----------------------------------------------------------'
-                  '-----------------------------------------------------------'
-                  '-------------------------------------')
-            print(
-                ' File:      {}'.
-                format('\n duplicate: '.join(duplicates_dictionary[index]))
-            )
+def print_duplicates(dictionary):
+    print(dictionary)
+    for hash, file in dictionary:
+        print ((hash, file))
 
 
 if __name__ == '__main__':
     args = parse_arg()
     folder_path = args.folder_path
-    dictionary_of_duplicates = get_duplicates(folder_path)
-    print_duplicates(dictionary_of_duplicates)
+    duplicates_dictionary = get_duplicates_dictionary(folder_path)
+    print_duplicates(duplicates_dictionary)

@@ -15,41 +15,51 @@ optional arguments:
 ```
 To start searching for duplicate files in a folder, you must specify the path to the folder using the space after the script is called.
 ```bash
-~$ python duplicates.py d:\backup
+~$ python duplicates.py C:\devman
 ------------------------------------------------------------------------------------------------------------------------
- File:      d:\backup\07.09.2015\Документы\Заявка на предоставление информационных сервисов.doc
- duplicate: d:\backup\07.09.2015\Документы\Регламент\Заявка на предоставление информационных сервисов.doc
+File "description" has duplicate:
+C:\devman\.git\description
+C:\devman\10_coursera\.git\description
+C:\devman\11_duplicates\.git\description
+C:\devman\12_image_resize\.git\description
+C:\devman\14_pre_commit_hook\.git\description
+C:\devman\15_midnighters\.git\description
+C:\devman\17_sites_monitoring\.git\description
+C:\devman\3_bars\.git\description
+C:\devman\5_lang_frequency\.git\description
 ------------------------------------------------------------------------------------------------------------------------
- File:      d:\backup\07.09.2015\Документы\Резюме.docx
- duplicate: d:\backup\07.09.2015\Документы\ЗКС\Резюме.docx
+File "HEAD" has duplicate:
+C:\devman\.git\HEAD
+C:\devman\10_coursera\.git\HEAD
+C:\devman\11_duplicates\.git\HEAD
+C:\devman\12_image_resize\.git\HEAD
+C:\devman\14_pre_commit_hook\.git\HEAD
+C:\devman\15_midnighters\.git\HEAD
+C:\devman\17_sites_monitoring\.git\HEAD
+C:\devman\3_bars\.git\HEAD
+C:\devman\5_lang_frequency\.git\HEAD
 ------------------------------------------------------------------------------------------------------------------------
- File:      d:\backup\07.09.2015\Документы\Apex site design\.DS_Store
- duplicate: d:\backup\07.09.2015\Рабочий стол\Apex site design\.DS_Store
+File "applypatch-msg.sample" has duplicate:
+C:\devman\.git\hooks\applypatch-msg.sample
+C:\devman\10_coursera\.git\hooks\applypatch-msg.sample
+C:\devman\11_duplicates\.git\hooks\applypatch-msg.sample
+C:\devman\12_image_resize\.git\hooks\applypatch-msg.sample
+C:\devman\14_pre_commit_hook\.git\hooks\applypatch-msg.sample
+C:\devman\15_midnighters\.git\hooks\applypatch-msg.sample
+C:\devman\17_sites_monitoring\.git\hooks\applypatch-msg.sample
+C:\devman\3_bars\.git\hooks\applypatch-msg.sample
+C:\devman\5_lang_frequency\.git\hooks\applypatch-msg.sample
 ------------------------------------------------------------------------------------------------------------------------
- File:      d:\backup\07.09.2015\Документы\Apex site design\Apex-Site-51.jpg
- duplicate: d:\backup\07.09.2015\Рабочий стол\Apex site design\Apex-Site-51.jpg
-------------------------------------------------------------------------------------------------------------------------
- File:      d:\backup\07.09.2015\Документы\Apex site design\Apex-Site-52.jpg
- duplicate: d:\backup\07.09.2015\Рабочий стол\Apex site design\Apex-Site-52.jpg
-------------------------------------------------------------------------------------------------------------------------
- File:      d:\backup\07.09.2015\Документы\Apex site design\Apex-Site-53.jpg
- duplicate: d:\backup\07.09.2015\Рабочий стол\Apex site design\Apex-Site-53.jpg
-------------------------------------------------------------------------------------------------------------------------
- File:      d:\backup\07.09.2015\Документы\Apex site design\Apex-Site-54.jpg
- duplicate: d:\backup\07.09.2015\Рабочий стол\Apex site design\Apex-Site-54.jpg
-------------------------------------------------------------------------------------------------------------------------
- File:      d:\backup\07.09.2015\Документы\Apex site design\Apex-Site-55-Mouse-Over.jpg
- duplicate: d:\backup\07.09.2015\Рабочий стол\Apex site design\Apex-Site-55-Mouse-Over.jpg
-------------------------------------------------------------------------------------------------------------------------
- File:      d:\backup\07.09.2015\Документы\Apex site design\Apex-Site-55.jpg
- duplicate: d:\backup\07.09.2015\Рабочий стол\Apex site design\Apex-Site-55.jpg
-------------------------------------------------------------------------------------------------------------------------
- File:      d:\backup\07.09.2015\Документы\Apex site design\Apex-Site-56.jpg
- duplicate: d:\backup\07.09.2015\Рабочий стол\Apex site design\Apex-Site-56.jpg
-------------------------------------------------------------------------------------------------------------------------
- File:      d:\backup\07.09.2015\Документы\Apex site design\INDD\Apex-Site-5.indd
- duplicate: d:\backup\07.09.2015\Рабочий стол\Apex site design\INDD\Apex-Site-5.indd
-------------------------------------------------------------------------------------------------------------------------
+File "commit-msg.sample" has duplicate:
+C:\devman\.git\hooks\commit-msg.sample
+C:\devman\10_coursera\.git\hooks\commit-msg.sample
+C:\devman\11_duplicates\.git\hooks\commit-msg.sample
+C:\devman\12_image_resize\.git\hooks\commit-msg.sample
+C:\devman\14_pre_commit_hook\.git\hooks\commit-msg.sample
+C:\devman\15_midnighters\.git\hooks\commit-msg.sample
+C:\devman\17_sites_monitoring\.git\hooks\commit-msg.sample
+C:\devman\3_bars\.git\hooks\commit-msg.sample
+C:\devman\5_lang_frequency\.git\hooks\commit-msg.sample
 ```
 
 # Project Goals

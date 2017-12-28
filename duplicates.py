@@ -1,7 +1,7 @@
 import os
 import hashlib
 import argparse
-from collections import namedtuple
+from collections import defaultdict
 
 
 def parse_arg():
@@ -14,7 +14,7 @@ def parse_arg():
 
 
 def get_duplicates_dictionary(folder):
-    dictionary_of_duplicate_files = namedtuple(list)
+    dictionary_of_duplicate_files = defaultdict(list)
     for dirs, subdirs, files in os.walk(folder):
         for file in files:
             file_path = os.path.join(dirs, file)
@@ -26,9 +26,11 @@ def get_duplicates_dictionary(folder):
 
 
 def print_duplicates(dictionary):
-    print(dictionary)
-    for hash, file in dictionary:
-        print ((hash, file))
+    than_one = 1
+    for key in dictionary:
+        if len(dictionary.get(key)) > than_one:
+         print('-' * 120)
+         print(' File:      {}'.format('\n duplicate: '.join(dictionary.get(key))))
 
 
 if __name__ == '__main__':

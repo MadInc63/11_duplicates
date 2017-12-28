@@ -13,7 +13,7 @@ def parse_arg():
     return parser.parse_args()
 
 
-def get_duplicates_dictionary(folder):
+def get_duplicates(folder):
     dictionary_of_duplicate_files = defaultdict(list)
     for dirs, subdirs, files in os.walk(folder):
         for file in files:
@@ -25,16 +25,20 @@ def get_duplicates_dictionary(folder):
     return dictionary_of_duplicate_files
 
 
-def print_duplicates(dictionary):
-    than_one = 1
-    for key in dictionary:
-        if len(dictionary.get(key)) > than_one:
-         print('-' * 120)
-         print(' File:      {}'.format('\n duplicate: '.join(dictionary.get(key))))
+def print_duplicates(duplicates):
+    dividing_line = ('-' * 120)
+    for key in duplicates:
+        file_name = key[1]
+        file_path = duplicates[key]
+        number_of_paths = len(duplicates[key])
+        if number_of_paths > 1:
+            print(dividing_line)
+            print('File "{}" has duplicate:'.format(file_name))
+            print('\n'.join(file_path))
 
 
 if __name__ == '__main__':
     args = parse_arg()
     folder_path = args.folder_path
-    duplicates_dictionary = get_duplicates_dictionary(folder_path)
-    print_duplicates(duplicates_dictionary)
+    list_of_duplicates = get_duplicates(folder_path)
+    print_duplicates(list_of_duplicates)

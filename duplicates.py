@@ -26,7 +26,7 @@ def get_duplicates(folder):
 
 
 def print_duplicates(duplicates):
-    dividing_line = ('-' * 120)
+    dividing_line = ('-' * 100)
     for key in duplicates:
         file_name = key[1]
         file_path = duplicates[key]

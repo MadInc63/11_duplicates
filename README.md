@@ -16,7 +16,7 @@ optional arguments:
 To start searching for duplicate files in a folder, you must specify the path to the folder using the space after the script is called.
 ```bash
 ~$ python duplicates.py C:\devman
-------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------
 File "description" has duplicate:
 C:\devman\.git\description
 C:\devman\10_coursera\.git\description
@@ -27,7 +27,7 @@ C:\devman\15_midnighters\.git\description
 C:\devman\17_sites_monitoring\.git\description
 C:\devman\3_bars\.git\description
 C:\devman\5_lang_frequency\.git\description
-------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------
 File "HEAD" has duplicate:
 C:\devman\.git\HEAD
 C:\devman\10_coursera\.git\HEAD
@@ -38,7 +38,7 @@ C:\devman\15_midnighters\.git\HEAD
 C:\devman\17_sites_monitoring\.git\HEAD
 C:\devman\3_bars\.git\HEAD
 C:\devman\5_lang_frequency\.git\HEAD
-------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------
 File "applypatch-msg.sample" has duplicate:
 C:\devman\.git\hooks\applypatch-msg.sample
 C:\devman\10_coursera\.git\hooks\applypatch-msg.sample
@@ -49,7 +49,7 @@ C:\devman\15_midnighters\.git\hooks\applypatch-msg.sample
 C:\devman\17_sites_monitoring\.git\hooks\applypatch-msg.sample
 C:\devman\3_bars\.git\hooks\applypatch-msg.sample
 C:\devman\5_lang_frequency\.git\hooks\applypatch-msg.sample
-------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------
 File "commit-msg.sample" has duplicate:
 C:\devman\.git\hooks\commit-msg.sample
 C:\devman\10_coursera\.git\hooks\commit-msg.sample
